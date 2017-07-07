@@ -4,13 +4,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import models.GenericModel;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import java.util.*
 
 /**
  * Created by David on 5/7/2017.
@@ -41,7 +40,7 @@ class Page {
         return sb.toString()
     }
 
-    fun getContenctPage(url: String): Document {
+    fun getContentPageByDocument(url: String): Document {
         try {
             return Jsoup.connect(url).get()
         } catch (ex: IOException) {
@@ -71,7 +70,7 @@ class Page {
 
     @Throws(IOException::class)
     fun getDataPage(url: String): GenericModel {
-        return getDataPage(getContenctPage(url))
+        return getDataPage(getContentPageByDocument(url))
     }
 
     @Throws(IOException::class)

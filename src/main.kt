@@ -1,3 +1,4 @@
+import bin.RaptorService
 import java.util.logging.Level
 import java.util.logging.Logger
 import java.sql.SQLException
@@ -7,7 +8,7 @@ import java.sql.SQLException
  */
 
 fun main(args: Array<String>) {
-    println("Hello")
+    println("Start service")
     try {
         val rs = RaptorService()
         rs.start()
